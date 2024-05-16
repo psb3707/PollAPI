@@ -1,0 +1,7 @@
+my_settings.py
+*.log
+*.pot
+*.pyc
+__pycache__
+db.sqlite3
+media

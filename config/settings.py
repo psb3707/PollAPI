@@ -21,12 +21,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = SECRET
+SECRET_KEY = 'django-insecure-%$a*du6^@9k@w)2vxrul-aa-z+=d@=d)a328mt7%v_%zg(_*=%'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -78,8 +78,12 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'poll-db',
+        'USER': 'seung',
+        'PASSWORD': 'psb011031!',
+        'HOST': 'mutsa-test-db.cxua8wo0mbwg.ap-northeast-2.rds.amazonaws.com',
+        'PORT':'3306'
     }
 }
 
